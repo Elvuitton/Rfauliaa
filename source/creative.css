@@ -1,0 +1,459 @@
+/* .import-font{
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Monoton&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Monoton&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Glitch+Pop&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Cutive+Mono&family=Monoton&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Glitch+Pop&display=swap');
+}  */
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Bungee+Outline&family=Caveat:wght@400..700&family=Cutive+Mono&family=Monoton&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Glitch+Pop&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  height: 140vh;
+  background: linear-gradient(
+    70deg,
+    /* rgb(133, 11, 255),
+    rgb(238, 130, 238),
+    rgb(64, 224, 208) */ #94ffd8,
+    #ff76ce,
+    #a3d8ff
+  );
+  color: #fff;
+}
+
+/* CSS-Tampilan-Desktop */
+
+/* Bag.kepala */
+
+.logo {
+  width: 40px;
+  animation: rotation 15s ease forwards;
+}
+@keyframes rotation {
+  10% {
+    transform: rotate(360deg);
+  }
+  20% {
+    transform: rotate(360deg);
+  }
+  30% {
+    transform: rotate(360deg);
+  }
+  40% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  60% {
+    transform: rotate(360deg);
+  }
+  70% {
+    transform: rotate(360deg);
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  90% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.mobile-menu-1 {
+  width: 15px;
+}
+.mobile-menu-2 {
+  width: 35px;
+}
+#kepala {
+  width: 100%;
+}
+.mata {
+  padding: 10px 10%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.5s * var(--i));
+}
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #5f625f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+.kueh-icon img {
+  width: 350px;
+  border-radius: 200px;
+  margin-top: 10%;
+  margin-left: 35%;
+  animation: zoomIn 0.5s ease forwards;
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.typing-text {
+  display: inline-block;
+  margin-left: 38%;
+  margin-top: 30px;
+}
+.running {
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-family: monospace;
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s /*steps(30)*/, cursor 0.5s step-end infinite alternate;
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+.hidung-teks h1 {
+  margin-left: 41.7%;
+}
+/* Bag.badan */
+
+#badan {
+  padding: 300px 0;
+}
+.rusuk {
+  padding: 10px 10%;
+}
+.jantung {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.hati {
+  flex-basis: 35%;
+}
+.hati img {
+  width: 100%;
+  border-radius: 15px;
+}
+.usus {
+  flex-basis: 60%;
+}
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+/* Bag.kaki */
+
+#kaki {
+  padding: -100px 0;
+}
+.paha {
+  padding: 10px 10%;
+}
+.lutut {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.telapak {
+  flex-basis: 35%;
+}
+.telapak img {
+  width: 100%;
+  border-radius: 15px;
+}
+.betis {
+  flex-basis: 60%;
+}
+/* Bag.komunikasi */
+
+#komunikasi {
+  padding: 100px 0;
+}
+.kolom {
+  padding: 400px 10%;
+}
+.isian {
+  flex-basis: 60%;
+}
+.isian form {
+  width: 100%;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #fff;
+  padding: 15px;
+  margin: 15px 0;
+  color: #222029;
+  font-size: 20px;
+  border-radius: 6px;
+}
+.notif {
+  font-size: 14px;
+  font-weight: 300;
+  color: #000000;
+  margin-top: -10px;
+  text-align: center;
+}
+form .btn2 {
+  padding: 14px 100px;
+  margin-left: 39%;
+  border-radius: 6px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.btn.btn2 {
+  display: inline-block;
+  background: #523b7ed7;
+  color: #fff;
+}
+.btn.btn2:hover {
+  background: #112580;
+  transition: background 0.2s;
+}
+#msg {
+  color: #000000;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+}
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #160f29d7;
+  font-weight: 300;
+  margin-top: 30px;
+}
+/* Bag.fitur-muncul-jika-dizinkan-atau-diminta-olehmu */
+
+#hiden-fitur h1 {
+  margin-top: -100px;
+  text-align: center;
+}
+
+/* CSS-Tampilan Mobile */
+
+nav img.mobile-menu-1,
+.mobile-menu-2 {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Bag.kepala */
+
+  .logo {
+    width: 30px;
+    margin-top: 20px;
+  }
+  .mobile-menu-1 {
+    width: 15px;
+  }
+  .mobile-menu-2 {
+    width: 35px;
+  }
+  nav ul {
+    background: #850ca4;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 60px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  nav img.mobile-menu-1 {
+    display: block;
+    margin-left: 0px;
+  }
+  .mobile-menu-2 {
+    display: block;
+    margin-left: 75%;
+    animation: slideBottom 0.5s ease forwards;
+  }
+  @keyframes slideBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  nav ul img.mobile-menu-1,
+  .mobile-menu-2 {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  .kueh-icon img {
+    width: 250px;
+    border-radius: 200px;
+    margin: 100px 7% 10px;
+    animation: zoomIn 0.5s ease forwards;
+  }
+  .typing-text {
+    display: inline-block;
+    margin-left: 60px;
+  }
+  .running {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: monospace;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.1em solid rgb(255, 255, 255);
+    animation: typing 3s steps(14), cursor 0.5s step-end infinite alternate;
+  }
+  @keyframes cursor {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  .hidung-teks h1 {
+    font-size: 20px;
+    margin-left: 35%;
+  }
+  /* Bag.badan */
+
+  #badan {
+    padding: 230px 0;
+  }
+  .hati,
+  .usus {
+    flex-basis: 100%;
+  }
+  .hati {
+    margin-bottom: 30px;
+  }
+  .usus {
+    font-size: 14px;
+  }
+  .hati img {
+    width: 250px;
+    margin-left: 15px;
+  }
+  .sub-title {
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+
+  /* Bag.kaki */
+
+  #kaki {
+    padding: 0px 0;
+  }
+  .lutut,
+  .betis {
+    flex-basis: 100%;
+  }
+  .lutut {
+    margin-bottom: 30px;
+  }
+  .betis {
+    font-size: 14px;
+  }
+  .telapak img {
+    width: 300px;
+  }
+  /* Bag.komunikasi */
+
+  #komunikasi {
+    padding: 20px 10px;
+    margin-top: -300px;
+  }
+  form input {
+    font-size: 18px;
+  }
+  form textarea {
+    font-size: 14px;
+  }
+  .btn.btn2 {
+    margin-left: 0px;
+    font-size: 11px;
+  }
+  #msg {
+    font-size: 12px;
+    text-align: center;
+  }
+  .copyright {
+    font-size: 8px;
+    margin-top: 30px;
+  }
+  /* Bag.fitur-muncul-jika-dizinkan-atau-diminta-olehmu */
+}
