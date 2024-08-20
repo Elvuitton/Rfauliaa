@@ -245,7 +245,8 @@ body {
   .note {
   color: rgb(136, 136, 136);
   font-size: 8px;
-  padding-top: 10px;
+  padding-top: 20px;
+  text-align: center;
 }
   .text {
     /* Mengatur seluruh bagian panel teks dalam kotak */
