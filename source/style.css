@@ -242,7 +242,7 @@ body {
     animation: Tuing 2s ease infinite forwards;
   }
   .note {
-  color: #fff;
+  color: rgb(136, 136, 136);
   font-size: 8px;
   padding-top: 10px;
 }
