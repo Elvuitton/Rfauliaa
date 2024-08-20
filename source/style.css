@@ -44,6 +44,11 @@ body {
     scale: 0.9;
   }
 }
+.note {
+  color: #fff;
+  font-size: 15px;
+  padding-top: 10px;
+}
 .gift-container {
   /* Menentukan posisi kotak secara paten */
   display: flex;
