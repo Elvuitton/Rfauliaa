@@ -1,31 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hai apa kabarmu 🤗</title>
+    <title>Hitung Mundur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .countdown {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .time {
+            font-size: 2em;
+            color: #333;
+        }
+        .message {
+            font-size: 1.5em;
+            color: red;
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .time {
+                font-size: 1.5em;
+            }
+            .message {
+                font-size: 1.2em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <center>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2>ILY Forever 😉</h2>
-<h5>Update: 18-09-2024</h5>
-</center>
+
+<div class="countdown">
+    <h1 id="countdown-title">Sisa Waktumu Saat Ini</h1>
+    <div class="time" id="countdown"></div>
+    <div class="message" id="message">"one word for me?"</div>
+</div>
+
+<script>
+    const endDate = new Date('2025-08-21T23:59:59').getTime();
+    const countdownElement = document.getElementById('countdown');
+    const messageElement = document.getElementById('message');
+    const titleElement = document.getElementById('countdown-title');
+
+    const updateCountdown = () => {
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        if (distance > 0) {
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            countdownElement.innerHTML = `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik`;
+            messageElement.style.display = 'none';
+        } else {
+            clearInterval(interval);
+            countdownElement.innerHTML = "";
+            titleElement.style.display = 'none'; // Hilangkan judul
+
+            let countdown = 10;
+            const countdownInterval = setInterval(() => {
+                if (countdown >= 0) {
+                    countdownElement.innerHTML = countdown;
+                    countdown--;
+                } else {
+                    clearInterval(countdownInterval);
+                    countdownElement.innerHTML = "";
+                    messageElement.style.display = 'block'; // Tampilkan pesan setelah hitung mundur selesai
+                }
+            }, 1000);
+        }
+    };
+
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>
+
 </body>
 </html>
